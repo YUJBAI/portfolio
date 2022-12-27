@@ -1,18 +1,56 @@
-.body {
+body {
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #f9f9f9;
-}
-
-.wrapper {
-  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  margin: 0;
 }
 
 .topbar_inner {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background-color: white;
 }
 
 .menu {
   display: flex;
+  align-items: center;
+  width: 90%;
+}
+
+.menu #list {
+  display: none;
+}
+
+#list .list-hide {
+  padding: 0;
+  opacity: 1;
+  height: 0;
+}
+
+.menu a {
+  float: left;
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  top: 50%;
+}
+
+.menu a.hamburger-inner {
+  float: right;
+}
+
+.menu a:hover {
+  color: #ff4522;
+}
+
+.menu .logo {
+  color: black;
+  font-size: 1.7rem;
+  display: block;
+  flex: 1;
 }
 
 .hamburger-inner {
@@ -40,6 +78,44 @@
 
 .change .bar3 {
   transform: translate(0, -11px) rotate(45deg);
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  background-color: beige;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.left .name {
+  color: #ff4522;
+  font-size: 1.3rem;
+}
+.left .job {
+  text-transform: uppercase;
+  font-size: 1.9rem;
+  font-weight: 800;
+}
+
+.service {
+  background-color: antiquewhite;
+}
+
+.image {
+  overflow: hidden;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  transform: rotate(8deg);
+}
+.image .photo {
+  width: 250px;
 }
 
 /*# sourceMappingURL=style.css.map */

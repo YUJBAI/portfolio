@@ -1,20 +1,65 @@
-.body {
+$subject-color: #ff4522;
+body {
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #f9f9f9;
-}
-.wrapper {
-  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  margin: 0;
 }
 .topbar_inner {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background-color: white;
 }
 .menu {
+  // overflow: hidden;
+  // background-color: white;
+  // position: relative;
   display: flex;
+  // justify-content: space-evenly;
+  // justify-content: flex-end;
+  align-items: center;
+  // position: absolute;
+  width: 90%;
 }
-// .hamburger-inner::before {
-// }
-// .hamburger-inner::after {
-// }
+
+.menu #list {
+  display: none;
+}
+
+#list .list-hide {
+  padding: 0;
+  opacity: 1;
+  height: 0;
+}
+
+.menu a {
+  float: left;
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  top: 50%;
+}
+
+.menu a.hamburger-inner {
+  float: right;
+}
+.menu a:hover {
+  // background-color: #ddd;
+  // color: black;
+  color: $subject-color;
+}
+
+.menu .logo {
+  color: black;
+  font-size: 1.7rem;
+  // height: 100%;
+  display: block;
+  flex: 1;
+}
+
 .hamburger-inner {
   display: inline-block;
   cursor: pointer;
@@ -40,4 +85,50 @@
 
 .change .bar3 {
   transform: translate(0, -11px) rotate(45deg);
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left {
+  background-color: beige;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .name {
+    color: $subject-color;
+    font-size: 1.3rem;
+  }
+  .job {
+    text-transform: uppercase;
+    font-size: 1.9rem;
+    font-weight: 800;
+  }
+}
+.service {
+  background-color: antiquewhite;
+}
+// .right {
+//   background-color: aqua;
+// }
+// .image {
+//   order: 1;
+// }
+// .photo {
+//   width: 10px;
+//   height: 20px;
+// }
+.image {
+  overflow: hidden;
+  // display: inline-block;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  transform: rotate(8deg);
+  .photo {
+    width: 250px;
+  }
 }

@@ -105,7 +105,7 @@
       <a
         href="javascript:void(0);"
         class="hamburger-inner"
-        onclick="myFunction(this)"
+        id="hamburger-inner"
       >
         <div class="bar1"></div>
         <div class="bar2"></div>
@@ -113,34 +113,47 @@
       </a>
     </div>
     <script>
-      function myFunction(x) {
-        document.getElementById("list").classList.toggle("change");
-        var hint = document.getElementById("list");
-        if (hint.style.display == "none") {
-          hint.style.display = "block";
-          console.log(hint.style.display);
-        } else {
-          hint.style.display = "none";
-          console.log(hint.style.display);
-        }
-      }
-
-      // document.getElementById("list").addEventListener("click", function () {
-      //   document.getElementById("list").classList.toggle("change");
-      //   var hint = document.getElementById("list");
-      //   hint.classList.toggle("change");
-      //   if (hint.style.display == "none") {
-      //     hint.style.display = "block";
-      //     hint.classList.add("change");
-      //   } else {
+      // function myFunction(x) {
+      //   x.classList.toggle("change");
+      //   console.log(x);
+      //   var hint = document.getElementById("hamburger-inner");
+      //   console.log(hint);
+      //   // if (hint.style.display == "none") {
+      //   //   hint.style.display = "block";
+      //   //   console.log(hint.style.display);
+      //   // } else {
+      //   //   hint.style.display = "none";
+      //   //   console.log(hint.style.display);
+      //   // }
+      //   if (hint.style.display === "block") {
       //     hint.style.display = "none";
-      //     hint.classList.remove("change");
+      //     console.log(hint.style.display);
+      //   } else {
+      //     hint.style.display = "block";
+      //     console.log(hint.style.display);
       //   }
-      //   console.log(document.getElementById("list"));
-      // });
+      // }
+
+      // document
+      //   .getElementById("hamburger-inner")
+      //   .addEventListener("click", function () {
+      //     document.getElementById("hamburger-inner").classList.toggle("change");
+      //     console.log(document.getElementById("hamburger-inner"));
+      //     var hint = document.getElementById("list");
+      //     // hint.classList.toggle("change");
+      //     if (hint.style.display == "none") {
+      //       hint.style.display = "block";
+      //       // hint.classList.add("change");
+      //     } else {
+      //       hint.style.display = "none";
+      //       // hint.classList.remove("change");
+      //     }
+      //     // console.log(document.getElementById("list"));
+      //   });
       $(document).ready(function () {
         $(".hamburger-inner").click(function () {
           $("#list").toggle("slow");
+          $("#hamburger-inner").toggleClass("change");
         });
       });
     </script>
